@@ -1,0 +1,1025 @@
+Excercise-3
+
+SQL> select employee_id,last_name, salary,trunc(salary*(155/100),0) "NEW_SALARY",(trunc(salary*(155/100),0)-salary) Increase from employees;
+
+EMPLOYEE_ID LAST_NAME                     SALARY NEW_SALARY   INCREASE          
+----------- ------------------------- ---------- ---------- ----------          
+        100 King                           24000      37200      13200          
+        101 Kochhar                        17000      26350       9350          
+        102 De Haan                        17000      26350       9350          
+        103 Hunold                          9000      13950       4950          
+        104 Ernst                           6000       9300       3300          
+        105 Austin                          4800       7440       2640          
+        106 Pataballa                       4800       7440       2640          
+        107 Lorentz                         4200       6510       2310          
+        108 Greenberg                      12008      18612       6604          
+        109 Faviet                          9000      13950       4950          
+        110 Chen                            8200      12710       4510          
+
+EMPLOYEE_ID LAST_NAME                     SALARY NEW_SALARY   INCREASE          
+----------- ------------------------- ---------- ---------- ----------          
+        111 Sciarra                         7700      11935       4235          
+        112 Urman                           7800      12090       4290          
+        113 Popp                            6900      10695       3795          
+        114 Raphaely                       11000      17050       6050          
+        115 Khoo                            3100       4805       1705          
+        116 Baida                           2900       4495       1595          
+        117 Tobias                          2800       4340       1540          
+        118 Himuro                          2600       4030       1430          
+        119 Colmenares                      2500       3875       1375          
+        120 Weiss                           8000      12400       4400          
+        121 Fripp                           8200      12710       4510          
+
+EMPLOYEE_ID LAST_NAME                     SALARY NEW_SALARY   INCREASE          
+----------- ------------------------- ---------- ---------- ----------          
+        122 Kaufling                        7900      12245       4345          
+        123 Vollman                         6500      10075       3575          
+        124 Mourgos                         5800       8990       3190          
+        125 Nayer                           3200       4960       1760          
+        126 Mikkilineni                     2700       4185       1485          
+        127 Landry                          2400       3720       1320          
+        128 Markle                          2200       3410       1210          
+        129 Bissot                          3300       5115       1815          
+        130 Atkinson                        2800       4340       1540          
+        131 Marlow                          2500       3875       1375          
+        132 Olson                           2100       3255       1155          
+
+EMPLOYEE_ID LAST_NAME                     SALARY NEW_SALARY   INCREASE          
+----------- ------------------------- ---------- ---------- ----------          
+        133 Mallin                          3300       5115       1815          
+        134 Rogers                          2900       4495       1595          
+        135 Gee                             2400       3720       1320          
+        136 Philtanker                      2200       3410       1210          
+        137 Ladwig                          3600       5580       1980          
+        138 Stiles                          3200       4960       1760          
+        139 Seo                             2700       4185       1485          
+        140 Patel                           2500       3875       1375          
+        141 Rajs                            3500       5425       1925          
+        142 Davies                          3100       4805       1705          
+        143 Matos                           2600       4030       1430          
+
+EMPLOYEE_ID LAST_NAME                     SALARY NEW_SALARY   INCREASE          
+----------- ------------------------- ---------- ---------- ----------          
+        144 Vargas                          2500       3875       1375          
+        145 Russell                        14000      21700       7700          
+        146 Partners                       13500      20925       7425          
+        147 Errazuriz                      12000      18600       6600          
+        148 Cambrault                      11000      17050       6050          
+        149 Zlotkey                        10500      16275       5775          
+        150 Tucker                         10000      15500       5500          
+        151 Bernstein                       9500      14725       5225          
+        152 Hall                            9000      13950       4950          
+        153 Olsen                           8000      12400       4400          
+        154 Cambrault                       7500      11625       4125          
+
+EMPLOYEE_ID LAST_NAME                     SALARY NEW_SALARY   INCREASE          
+----------- ------------------------- ---------- ---------- ----------          
+        155 Tuvault                         7000      10850       3850          
+        156 King                           10000      15500       5500          
+        157 Sully                           9500      14725       5225          
+        158 McEwen                          9000      13950       4950          
+        159 Smith                           8000      12400       4400          
+        160 Doran                           7500      11625       4125          
+        161 Sewall                          7000      10850       3850          
+        162 Vishney                        10500      16275       5775          
+        163 Greene                          9500      14725       5225          
+        164 Marvins                         7200      11160       3960          
+        165 Lee                             6800      10540       3740          
+
+EMPLOYEE_ID LAST_NAME                     SALARY NEW_SALARY   INCREASE          
+----------- ------------------------- ---------- ---------- ----------          
+        166 Ande                            6400       9920       3520          
+        167 Banda                           6200       9610       3410          
+        168 Ozer                           11500      17825       6325          
+        169 Bloom                          10000      15500       5500          
+        170 Fox                             9600      14880       5280          
+        171 Smith                           7400      11470       4070          
+        172 Bates                           7300      11315       4015          
+        173 Kumar                           6100       9455       3355          
+        174 Abel                           11000      17050       6050          
+        175 Hutton                          8800      13640       4840          
+        176 Taylor                          8600      13330       4730          
+
+EMPLOYEE_ID LAST_NAME                     SALARY NEW_SALARY   INCREASE          
+----------- ------------------------- ---------- ---------- ----------          
+        177 Livingston                      8400      13020       4620          
+        178 Grant                           7000      10850       3850          
+        179 Johnson                         6200       9610       3410          
+        180 Taylor                          3200       4960       1760          
+        181 Fleaur                          3100       4805       1705          
+        182 Sullivan                        2500       3875       1375          
+        183 Geoni                           2800       4340       1540          
+        184 Sarchand                        4200       6510       2310          
+        185 Bull                            4100       6355       2255          
+        186 Dellinger                       3400       5270       1870          
+        187 Cabrio                          3000       4650       1650          
+
+EMPLOYEE_ID LAST_NAME                     SALARY NEW_SALARY   INCREASE          
+----------- ------------------------- ---------- ---------- ----------          
+        188 Chung                           3800       5890       2090          
+        189 Dilly                           3600       5580       1980          
+        190 Gates                           2900       4495       1595          
+        191 Perkins                         2500       3875       1375          
+        192 Bell                            4000       6200       2200          
+        193 Everett                         3900       6045       2145          
+        194 McCain                          3200       4960       1760          
+        195 Jones                           2800       4340       1540          
+        196 Walsh                           3100       4805       1705          
+        197 Feeney                          3000       4650       1650          
+        198 OConnell                        2600       4030       1430          
+
+EMPLOYEE_ID LAST_NAME                     SALARY NEW_SALARY   INCREASE          
+----------- ------------------------- ---------- ---------- ----------          
+        199 Grant                           2600       4030       1430          
+        200 Whalen                          4400       6820       2420          
+        201 Hartstein                      13000      20150       7150          
+        202 Fay                             6000       9300       3300          
+        203 Mavris                          6500      10075       3575          
+        204 Baer                           10000      15500       5500          
+        205 Higgins                        12008      18612       6604          
+        206 Gietz                           8300      12865       4565          
+
+107 rows selected.
+
+SQL> spool off
+SQL> select INITCAP(last_name), LENGTH(last_name)
+  2  from employees
+  3  where SUBSTR(last_name,0,1)='J' OR SUBSTR(last_name,0,1)='A' OR SUBSTR(last_name,0,1)='M';
+
+INITCAP(LAST_NAME)        LENGTH(LAST_NAME)                                     
+------------------------- -----------------                                     
+Abel                                      4                                     
+Ande                                      4                                     
+Atkinson                                  8                                     
+Austin                                    6                                     
+Johnson                                   7                                     
+Jones                                     5                                     
+Mallin                                    6                                     
+Markle                                    6                                     
+Marlow                                    6                                     
+Marvins                                   7                                     
+Matos                                     5                                     
+
+INITCAP(LAST_NAME)        LENGTH(LAST_NAME)                                     
+------------------------- -----------------                                     
+Mavris                                    6                                     
+Mccain                                    6                                     
+Mcewen                                    6                                     
+Mikkilineni                              11                                     
+Mourgos                                   7                                     
+
+16 rows selected.
+
+SQL> spool D:/sqllab.txt append
+SQL> select INITCAP(last_name) Name, LENGTH(last_name)
+  2  from employees
+  3  where SUBSTR(last_name,0,1)='J' OR SUBSTR(last_name,0,1)='A' OR SUBSTR(last_name,0,1)='M';
+
+NAME                      LENGTH(LAST_NAME)                                     
+------------------------- -----------------                                     
+Abel                                      4                                     
+Ande                                      4                                     
+Atkinson                                  8                                     
+Austin                                    6                                     
+Johnson                                   7                                     
+Jones                                     5                                     
+Mallin                                    6                                     
+Markle                                    6                                     
+Marlow                                    6                                     
+Marvins                                   7                                     
+Matos                                     5                                     
+
+NAME                      LENGTH(LAST_NAME)                                     
+------------------------- -----------------                                     
+Mavris                                    6                                     
+Mccain                                    6                                     
+Mcewen                                    6                                     
+Mikkilineni                              11                                     
+Mourgos                                   7                                     
+
+16 rows selected.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1  select INITCAP(last_name) Name, LENGTH(last_name) Length
+  2  from employees
+  3* where SUBSTR(last_name,0,1)='J' OR SUBSTR(last_name,0,1)='A' OR SUBSTR(last_name,0,1)='M'
+SQL> /
+
+NAME                          LENGTH                                            
+------------------------- ----------                                            
+Abel                               4                                            
+Ande                               4                                            
+Atkinson                           8                                            
+Austin                             6                                            
+Johnson                            7                                            
+Jones                              5                                            
+Mallin                             6                                            
+Markle                             6                                            
+Marlow                             6                                            
+Marvins                            7                                            
+Matos                              5                                            
+
+NAME                          LENGTH                                            
+------------------------- ----------                                            
+Mavris                             6                                            
+Mccain                             6                                            
+Mcewen                             6                                            
+Mikkilineni                       11                                            
+Mourgos                            7                                            
+
+16 rows selected.
+
+SQL> spool D:/sqllab.txt append
+SQL> select last_name, ((sysdate-hire_date)/30) Months_Worked
+  2  from employees;
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+King                         201.155202                                         
+Kochhar                      173.588535                                         
+De Haan                      230.655202                                         
+Hunold                       170.121869                                         
+Ernst                        153.355202                                         
+Austin                       176.521869                                         
+Pataballa                    169.021869                                         
+Lorentz                      156.788535                                         
+Greenberg                    211.288535                                         
+Faviet                       211.321869                                         
+Chen                         173.355202                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Sciarra                      173.288535                                         
+Urman                        168.021869                                         
+Popp                         146.688535                                         
+Raphaely                     207.555202                                         
+Khoo                         202.155202                                         
+Baida                        170.455202                                         
+Tobias                       175.555202                                         
+Himuro                       159.588535                                         
+Colmenares                   150.655202                                         
+Weiss                        187.921869                                         
+Fripp                        179.055202                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Kaufling                     202.721869                                         
+Vollman                      172.955202                                         
+Mourgos                      147.388535                                         
+Nayer                        175.821869                                         
+Mikkilineni                  161.188535                                         
+Landry                       157.588535                                         
+Markle                       143.621869                                         
+Bissot                       174.655202                                         
+Atkinson                     172.288535                                         
+Marlow                       180.821869                                         
+Olson                        154.721869                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Mallin                       189.055202                                         
+Rogers                       162.288535                                         
+Gee                          146.521869                                         
+Philtanker                   144.655202                                         
+Ladwig                       200.255202                                         
+Stiles                       172.421869                                         
+Seo                          168.788535                                         
+Patel                        167.021869                                         
+Rajs                         197.088535                                         
+Davies                       181.421869                                         
+Matos                        167.755202                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Vargas                       163.888535                                         
+Russell                      185.421869                                         
+Partners                     182.221869                                         
+Errazuriz                    180.088535                                         
+Cambrault                    148.455202                                         
+Zlotkey                      144.921869                                         
+Tucker                       181.388535                                         
+Bernstein                    179.621869                                         
+Hall                         174.655202                                         
+Olsen                        167.255202                                         
+Cambrault                    158.788535                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Tuvault                      147.155202                                         
+King                         193.588535                                         
+Sully                        192.455202                                         
+McEwen                       187.455202                                         
+Smith                        180.088535                                         
+Doran                        170.755202                                         
+Sewall                       159.988535                                         
+Vishney                      171.888535                                         
+Greene                       155.455202                                         
+Marvins                      145.088535                                         
+Lee                          144.088535                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Ande                         143.088535                                         
+Banda                        142.155202                                         
+Ozer                         180.055202                                         
+Bloom                        167.488535                                         
+Fox                          169.421869                                         
+Smith                        156.255202                                         
+Bates                        155.288535                                         
+Kumar                        142.155202                                         
+Abel                         190.188535                                         
+Hutton                       179.788535                                         
+Taylor                       167.455202                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Livingston                   166.455202                                         
+Grant                        153.255202                                         
+Johnson                      145.755202                                         
+Taylor                       169.421869                                         
+Fleaur                       168.421869                                         
+Sullivan                     152.321869                                         
+Geoni                        144.755202                                         
+Sarchand                     193.688535                                         
+Bull                         180.688535                                         
+Dellinger                    164.388535                                         
+Cabrio                       156.788535                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Chung                        176.888535                                         
+Dilly                        174.888535                                         
+Gates                        163.821869                                         
+Perkins                      146.288535                                         
+Bell                         193.421869                                         
+Everett                      180.321869                                         
+McCain                       164.155202                                         
+Jones                        155.521869                                         
+Walsh                        166.421869                                         
+Feeney                       165.455202                                         
+OConnell                     152.321869                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Grant                        145.455202                                         
+Whalen                       198.088535                                         
+Hartstein                    192.988535                                         
+Fay                          174.755202                                         
+Mavris                       213.655202                                         
+Baer                         213.655202                                         
+Higgins                      213.655202                                         
+Gietz                        213.655202                                         
+
+107 rows selected.
+
+SQL> select last_name, ((sysdate-hire_date)/30) Months_Worked
+  2  from employees
+  3  ORDER BY Months_Worked ASC;
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Banda                        142.155258                                         
+Kumar                        142.155258                                         
+Ande                         143.088592                                         
+Markle                       143.621925                                         
+Lee                          144.088592                                         
+Philtanker                   144.655258                                         
+Geoni                        144.755258                                         
+Zlotkey                      144.921925                                         
+Marvins                      145.088592                                         
+Grant                        145.455258                                         
+Johnson                      145.755258                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Perkins                      146.288592                                         
+Gee                          146.521925                                         
+Popp                         146.688592                                         
+Tuvault                      147.155258                                         
+Mourgos                      147.388592                                         
+Cambrault                    148.455258                                         
+Colmenares                   150.655258                                         
+OConnell                     152.321925                                         
+Sullivan                     152.321925                                         
+Grant                        153.255258                                         
+Ernst                        153.355258                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Olson                        154.721925                                         
+Bates                        155.288592                                         
+Greene                       155.455258                                         
+Jones                        155.521925                                         
+Smith                        156.255258                                         
+Lorentz                      156.788592                                         
+Cabrio                       156.788592                                         
+Landry                       157.588592                                         
+Cambrault                    158.788592                                         
+Himuro                       159.588592                                         
+Sewall                       159.988592                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Mikkilineni                  161.188592                                         
+Rogers                       162.288592                                         
+Gates                        163.821925                                         
+Vargas                       163.888592                                         
+McCain                       164.155258                                         
+Dellinger                    164.388592                                         
+Feeney                       165.455258                                         
+Walsh                        166.421925                                         
+Livingston                   166.455258                                         
+Patel                        167.021925                                         
+Olsen                        167.255258                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Taylor                       167.455258                                         
+Bloom                        167.488592                                         
+Matos                        167.755258                                         
+Urman                        168.021925                                         
+Fleaur                       168.421925                                         
+Seo                          168.788592                                         
+Pataballa                    169.021925                                         
+Fox                          169.421925                                         
+Taylor                       169.421925                                         
+Hunold                       170.121925                                         
+Baida                        170.455258                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Doran                        170.755258                                         
+Vishney                      171.888592                                         
+Atkinson                     172.288592                                         
+Stiles                       172.421925                                         
+Vollman                      172.955258                                         
+Sciarra                      173.288592                                         
+Chen                         173.355258                                         
+Kochhar                      173.588592                                         
+Bissot                       174.655258                                         
+Hall                         174.655258                                         
+Fay                          174.755258                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Dilly                        174.888592                                         
+Tobias                       175.555258                                         
+Nayer                        175.821925                                         
+Austin                       176.521925                                         
+Chung                        176.888592                                         
+Fripp                        179.055258                                         
+Bernstein                    179.621925                                         
+Hutton                       179.788592                                         
+Ozer                         180.055258                                         
+Errazuriz                    180.088592                                         
+Smith                        180.088592                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Everett                      180.321925                                         
+Bull                         180.688592                                         
+Marlow                       180.821925                                         
+Tucker                       181.388592                                         
+Davies                       181.421925                                         
+Partners                     182.221925                                         
+Russell                      185.421925                                         
+McEwen                       187.455258                                         
+Weiss                        187.921925                                         
+Mallin                       189.055258                                         
+Abel                         190.188592                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Sully                        192.455258                                         
+Hartstein                    192.988592                                         
+Bell                         193.421925                                         
+King                         193.588592                                         
+Sarchand                     193.688592                                         
+Rajs                         197.088592                                         
+Whalen                       198.088592                                         
+Ladwig                       200.255258                                         
+King                         201.155258                                         
+Khoo                         202.155258                                         
+Kaufling                     202.721925                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Raphaely                     207.555258                                         
+Greenberg                    211.288592                                         
+Faviet                       211.321925                                         
+Gietz                        213.655258                                         
+Mavris                       213.655258                                         
+Baer                         213.655258                                         
+Higgins                      213.655258                                         
+De Haan                      230.655258                                         
+
+107 rows selected.
+
+SQL> spool D:/sqllab.txt append
+SQL> select last_name, trunc(((sysdate-hire_date)/30),0) Months_Worked
+  2  from employees
+  3  ORDER BY Months_Worked ASC;
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Banda                               142                                         
+Kumar                               142                                         
+Ande                                143                                         
+Markle                              143                                         
+Lee                                 144                                         
+Geoni                               144                                         
+Zlotkey                             144                                         
+Philtanker                          144                                         
+Johnson                             145                                         
+Marvins                             145                                         
+Grant                               145                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Popp                                146                                         
+Perkins                             146                                         
+Gee                                 146                                         
+Tuvault                             147                                         
+Mourgos                             147                                         
+Cambrault                           148                                         
+Colmenares                          150                                         
+OConnell                            152                                         
+Sullivan                            152                                         
+Grant                               153                                         
+Ernst                               153                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Olson                               154                                         
+Bates                               155                                         
+Greene                              155                                         
+Jones                               155                                         
+Cabrio                              156                                         
+Lorentz                             156                                         
+Smith                               156                                         
+Landry                              157                                         
+Cambrault                           158                                         
+Sewall                              159                                         
+Himuro                              159                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Mikkilineni                         161                                         
+Rogers                              162                                         
+Vargas                              163                                         
+Gates                               163                                         
+McCain                              164                                         
+Dellinger                           164                                         
+Feeney                              165                                         
+Walsh                               166                                         
+Livingston                          166                                         
+Taylor                              167                                         
+Patel                               167                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Bloom                               167                                         
+Olsen                               167                                         
+Matos                               167                                         
+Fleaur                              168                                         
+Seo                                 168                                         
+Urman                               168                                         
+Taylor                              169                                         
+Fox                                 169                                         
+Pataballa                           169                                         
+Hunold                              170                                         
+Doran                               170                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Baida                               170                                         
+Vishney                             171                                         
+Vollman                             172                                         
+Stiles                              172                                         
+Atkinson                            172                                         
+Kochhar                             173                                         
+Sciarra                             173                                         
+Chen                                173                                         
+Dilly                               174                                         
+Hall                                174                                         
+Bissot                              174                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Fay                                 174                                         
+Nayer                               175                                         
+Tobias                              175                                         
+Austin                              176                                         
+Chung                               176                                         
+Hutton                              179                                         
+Bernstein                           179                                         
+Fripp                               179                                         
+Bull                                180                                         
+Everett                             180                                         
+Ozer                                180                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Errazuriz                           180                                         
+Smith                               180                                         
+Marlow                              180                                         
+Tucker                              181                                         
+Davies                              181                                         
+Partners                            182                                         
+Russell                             185                                         
+McEwen                              187                                         
+Weiss                               187                                         
+Mallin                              189                                         
+Abel                                190                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Sully                               192                                         
+Hartstein                           192                                         
+Sarchand                            193                                         
+King                                193                                         
+Bell                                193                                         
+Rajs                                197                                         
+Whalen                              198                                         
+Ladwig                              200                                         
+King                                201                                         
+Khoo                                202                                         
+Kaufling                            202                                         
+
+LAST_NAME                 MONTHS_WORKED                                         
+------------------------- -------------                                         
+Raphaely                            207                                         
+Faviet                              211                                         
+Greenberg                           211                                         
+Gietz                               213                                         
+Higgins                             213                                         
+Mavris                              213                                         
+Baer                                213                                         
+De Haan                             230                                         
+
+107 rows selected.
+
+SQL> spool /D:sqllab.txt append
+SQL> 
+SQL>  select INITCAP(last_name) Name, LENGTH(last_name)
+  2  from employees
+  3  where SUBSTR(last_name,0,1)='@last_name';
+
+no rows selected
+
+SQL>  select INITCAP(last_name) Name, LENGTH(last_name)
+  2  from employees
+  3  where SUBSTR(last_name,0,1)='&last_name';
+Enter value for last_name: H
+old   3: where SUBSTR(last_name,0,1)='&last_name'
+new   3: where SUBSTR(last_name,0,1)='H'
+
+NAME                      LENGTH(LAST_NAME)                                     
+------------------------- -----------------                                     
+Hall                                      4                                     
+Hartstein                                 9                                     
+Higgins                                   7                                     
+Himuro                                    6                                     
+Hunold                                    6                                     
+Hutton                                    6                                     
+
+6 rows selected.
+
+SQL> spool D:/sqllab.txt append
+SQL> select last_name, job_id, salary,DECODE(12*salary, '<40000',1.10*salary, '<80000', 1.15*salary, '<120000', 1.2*salary,salary) Revised_Salary
+  2  from employees;
+
+LAST_NAME                 JOB_ID         SALARY REVISED_SALARY                  
+------------------------- ---------- ---------- --------------                  
+King                      AD_PRES         24000          24000                  
+Kochhar                   AD_VP           17000          17000                  
+De Haan                   AD_VP           17000          17000                  
+Hunold                    IT_PROG          9000           9000                  
+Ernst                     IT_PROG          6000           6000                  
+Austin                    IT_PROG          4800           4800                  
+Pataballa                 IT_PROG          4800           4800                  
+Lorentz                   IT_PROG          4200           4200                  
+Greenberg                 FI_MGR          12008          12008                  
+Faviet                    FI_ACCOUNT       9000           9000                  
+Chen                      FI_ACCOUNT       8200           8200                  
+
+LAST_NAME                 JOB_ID         SALARY REVISED_SALARY                  
+------------------------- ---------- ---------- --------------                  
+Sciarra                   FI_ACCOUNT       7700           7700                  
+Urman                     FI_ACCOUNT       7800           7800                  
+Popp                      FI_ACCOUNT       6900           6900                  
+Raphaely                  PU_MAN          11000          11000                  
+Khoo                      PU_CLERK         3100           3100                  
+Baida                     PU_CLERK         2900           2900                  
+Tobias                    PU_CLERK         2800           2800                  
+Himuro                    PU_CLERK         2600           2600                  
+Colmenares                PU_CLERK         2500           2500                  
+Weiss                     ST_MAN           8000           8000                  
+Fripp                     ST_MAN           8200           8200                  
+
+LAST_NAME                 JOB_ID         SALARY REVISED_SALARY                  
+------------------------- ---------- ---------- --------------                  
+Kaufling                  ST_MAN           7900           7900                  
+Vollman                   ST_MAN           6500           6500                  
+Mourgos                   ST_MAN           5800           5800                  
+Nayer                     ST_CLERK         3200           3200                  
+Mikkilineni               ST_CLERK         2700           2700                  
+Landry                    ST_CLERK         2400           2400                  
+Markle                    ST_CLERK         2200           2200                  
+Bissot                    ST_CLERK         3300           3300                  
+Atkinson                  ST_CLERK         2800           2800                  
+Marlow                    ST_CLERK         2500           2500                  
+Olson                     ST_CLERK         2100           2100                  
+
+LAST_NAME                 JOB_ID         SALARY REVISED_SALARY                  
+------------------------- ---------- ---------- --------------                  
+Mallin                    ST_CLERK         3300           3300                  
+Rogers                    ST_CLERK         2900           2900                  
+Gee                       ST_CLERK         2400           2400                  
+Philtanker                ST_CLERK         2200           2200                  
+Ladwig                    ST_CLERK         3600           3600                  
+Stiles                    ST_CLERK         3200           3200                  
+Seo                       ST_CLERK         2700           2700                  
+Patel                     ST_CLERK         2500           2500                  
+Rajs                      ST_CLERK         3500           3500                  
+Davies                    ST_CLERK         3100           3100                  
+Matos                     ST_CLERK         2600           2600                  
+
+LAST_NAME                 JOB_ID         SALARY REVISED_SALARY                  
+------------------------- ---------- ---------- --------------                  
+Vargas                    ST_CLERK         2500           2500                  
+Russell                   SA_MAN          14000          14000                  
+Partners                  SA_MAN          13500          13500                  
+Errazuriz                 SA_MAN          12000          12000                  
+Cambrault                 SA_MAN          11000          11000                  
+Zlotkey                   SA_MAN          10500          10500                  
+Tucker                    SA_REP          10000          10000                  
+Bernstein                 SA_REP           9500           9500                  
+Hall                      SA_REP           9000           9000                  
+Olsen                     SA_REP           8000           8000                  
+Cambrault                 SA_REP           7500           7500                  
+
+LAST_NAME                 JOB_ID         SALARY REVISED_SALARY                  
+------------------------- ---------- ---------- --------------                  
+Tuvault                   SA_REP           7000           7000                  
+King                      SA_REP          10000          10000                  
+Sully                     SA_REP           9500           9500                  
+McEwen                    SA_REP           9000           9000                  
+Smith                     SA_REP           8000           8000                  
+Doran                     SA_REP           7500           7500                  
+Sewall                    SA_REP           7000           7000                  
+Vishney                   SA_REP          10500          10500                  
+Greene                    SA_REP           9500           9500                  
+Marvins                   SA_REP           7200           7200                  
+Lee                       SA_REP           6800           6800                  
+
+LAST_NAME                 JOB_ID         SALARY REVISED_SALARY                  
+------------------------- ---------- ---------- --------------                  
+Ande                      SA_REP           6400           6400                  
+Banda                     SA_REP           6200           6200                  
+Ozer                      SA_REP          11500          11500                  
+Bloom                     SA_REP          10000          10000                  
+Fox                       SA_REP           9600           9600                  
+Smith                     SA_REP           7400           7400                  
+Bates                     SA_REP           7300           7300                  
+Kumar                     SA_REP           6100           6100                  
+Abel                      SA_REP          11000          11000                  
+Hutton                    SA_REP           8800           8800                  
+Taylor                    SA_REP           8600           8600                  
+
+LAST_NAME                 JOB_ID         SALARY REVISED_SALARY                  
+------------------------- ---------- ---------- --------------                  
+Livingston                SA_REP           8400           8400                  
+Grant                     SA_REP           7000           7000                  
+Johnson                   SA_REP           6200           6200                  
+Taylor                    SH_CLERK         3200           3200                  
+Fleaur                    SH_CLERK         3100           3100                  
+Sullivan                  SH_CLERK         2500           2500                  
+Geoni                     SH_CLERK         2800           2800                  
+Sarchand                  SH_CLERK         4200           4200                  
+Bull                      SH_CLERK         4100           4100                  
+Dellinger                 SH_CLERK         3400           3400                  
+Cabrio                    SH_CLERK         3000           3000                  
+
+LAST_NAME                 JOB_ID         SALARY REVISED_SALARY                  
+------------------------- ---------- ---------- --------------                  
+Chung                     SH_CLERK         3800           3800                  
+Dilly                     SH_CLERK         3600           3600                  
+Gates                     SH_CLERK         2900           2900                  
+Perkins                   SH_CLERK         2500           2500                  
+Bell                      SH_CLERK         4000           4000                  
+Everett                   SH_CLERK         3900           3900                  
+McCain                    SH_CLERK         3200           3200                  
+Jones                     SH_CLERK         2800           2800                  
+Walsh                     SH_CLERK         3100           3100                  
+Feeney                    SH_CLERK         3000           3000                  
+OConnell                  SH_CLERK         2600           2600                  
+
+LAST_NAME                 JOB_ID         SALARY REVISED_SALARY                  
+------------------------- ---------- ---------- --------------                  
+Grant                     SH_CLERK         2600           2600                  
+Whalen                    AD_ASST          4400           4400                  
+Hartstein                 MK_MAN          13000          13000                  
+Fay                       MK_REP           6000           6000                  
+Mavris                    HR_REP           6500           6500                  
+Baer                      PR_REP          10000          10000                  
+Higgins                   AC_MGR          12008          12008                  
+Gietz                     AC_ACCOUNT       8300           8300                  
+
+107 rows selected.
+
+SQL> select last_name, job_id, salary,DECODE(12*salary Ann_sal, 'Ann_sal<40000',1.10*salary, 'Ann_sal<80000', 1.15*salary, 'Ann_Sal<120000', 1.2*salary,salary) Revised_Salary
+  2  from employees;
+select last_name, job_id, salary,DECODE(12*salary Ann_sal, 'Ann_sal<40000',1.10*salary, 'Ann_sal<80000', 1.15*salary, 'Ann_Sal<120000', 1.2*salary,salary) Revised_Salary
+                                                  *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+SQL> select last_name, job_id, salary,DECODE((12*salary) Ann_sal, 'Ann_sal<40000',1.10*salary, 'Ann_sal<80000', 1.15*salary, 'Ann_Sal<120000', 1.2*salary,salary) Revised_Salary
+  2  from employees;
+select last_name, job_id, salary,DECODE((12*salary) Ann_sal, 'Ann_sal<40000',1.10*salary, 'Ann_sal<80000', 1.15*salary, 'Ann_Sal<120000', 1.2*salary,salary) Revised_Salary
+                                                    *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+SQL> select last_name, job_id, salary,DECODE((12*salary) Ann_sal, 'Ann_sal<40000',1.10*salary, 'Ann_sal<80000', 1.15*salary, 'Ann_Sal<120000', 1.2*salary,salary) Revised_Salary
+  2  
+SQL> ed
+Wrote file afiedt.buf
+
+  1* select last_name, job_id, salary,DECODE((12*salary) Ann_sal, 'Ann_sal<40000',1.10*salary, 'Ann_sal<80000', 1.15*salary, 'Ann_Sal<120000', 1.2*salary,salary) Revised_Salary
+SQL> /
+select last_name, job_id, salary,DECODE((12*salary) Ann_sal, 'Ann_sal<40000',1.10*salary, 'Ann_sal<80000', 1.15*salary, 'Ann_Sal<120000', 1.2*salary,salary) Revised_Salary
+                                                    *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+SQL> /
+select last_name, job_id, salary,DECODE((12*salary) Ann_sal, 'Ann_sal<40000',1.10*salary, 'Ann_sal<80000', 1.15*salary, 'Ann_Sal<120000', 1.2*salary,salary) Revised_Salary
+                                                    *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+SQL> mm
+SP2-0042: unknown command "mm" - rest of line ignored.
+SQL> /
+select last_name, job_id, salary,DECODE((12*salary) Ann_sal, 'Ann_sal<40000',1.10*salary, 'Ann_sal<80000', 1.15*salary, 'Ann_Sal<120000', 1.2*salary,salary) Revised_Salary
+                                                    *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+SQL> select last_name, job_id, salary,DECODE((12*salary) Ann_sal, 'Ann_sal<40000',1.10*salary, 'Ann_sal<80000', 1.15*salary, 'Ann_Sal<120000', 1.2*salary,salary) Revised_Salary
+  2  
+SQL> select last_name, job_id, salary,DECODE(12*salary, '72000',1.25*salary, '84000',1.5*salary, '120000', 2*salary,salary) Revised_Salary
+  2  
+SQL> select last_name, job_id, salary,DECODE(12*salary, '72000',1.25*salary, '84000',1.5*salary, '120000', 2*salary,salary) Revised_Salary
+  2  from employees;
+
+LAST_NAME                 JOB_ID         SALARY REVISED_SALARY                  
+------------------------- ---------- ---------- --------------                  
+King                      AD_PRES         24000          24000                  
+Kochhar                   AD_VP           17000          17000                  
+De Haan                   AD_VP           17000          17000                  
+Hunold                    IT_PROG          9000           9000                  
+Ernst                     IT_PROG          6000           7500                  
+Austin                    IT_PROG          4800           4800                  
+Pataballa                 IT_PROG          4800           4800                  
+Lorentz                   IT_PROG          4200           4200                  
+Greenberg                 FI_MGR          12008          12008                  
+Faviet                    FI_ACCOUNT       9000           9000                  
+Chen                      FI_ACCOUNT       8200           8200                  
+
+LAST_NAME                 JOB_ID         SALARY REVISED_SALARY                  
+------------------------- ---------- ---------- --------------                  
+Sciarra                   FI_ACCOUNT       7700           7700                  
+Urman                     FI_ACCOUNT       7800           7800                  
+Popp                      FI_ACCOUNT       6900           6900                  
+Raphaely                  PU_MAN          11000          11000                  
+Khoo                      PU_CLERK         3100           3100                  
+Baida                     PU_CLERK         2900           2900                  
+Tobias                    PU_CLERK         2800           2800                  
+Himuro                    PU_CLERK         2600           2600                  
+Colmenares                PU_CLERK         2500           2500                  
+Weiss                     ST_MAN           8000           8000                  
+Fripp                     ST_MAN           8200           8200                  
+
+LAST_NAME                 JOB_ID         SALARY REVISED_SALARY                  
+------------------------- ---------- ---------- --------------                  
+Kaufling                  ST_MAN           7900           7900                  
+Vollman                   ST_MAN           6500           6500                  
+Mourgos                   ST_MAN           5800           5800                  
+Nayer                     ST_CLERK         3200           3200                  
+Mikkilineni               ST_CLERK         2700           2700                  
+Landry                    ST_CLERK         2400           2400                  
+Markle                    ST_CLERK         2200           2200                  
+Bissot                    ST_CLERK         3300           3300                  
+Atkinson                  ST_CLERK         2800           2800                  
+Marlow                    ST_CLERK         2500           2500                  
+Olson                     ST_CLERK         2100           2100                  
+
+LAST_NAME                 JOB_ID         SALARY REVISED_SALARY                  
+------------------------- ---------- ---------- --------------                  
+Mallin                    ST_CLERK         3300           3300                  
+Rogers                    ST_CLERK         2900           2900                  
+Gee                       ST_CLERK         2400           2400                  
+Philtanker                ST_CLERK         2200           2200                  
+Ladwig                    ST_CLERK         3600           3600                  
+Stiles                    ST_CLERK         3200           3200                  
+Seo                       ST_CLERK         2700           2700                  
+Patel                     ST_CLERK         2500           2500                  
+Rajs                      ST_CLERK         3500           3500                  
+Davies                    ST_CLERK         3100           3100                  
+Matos                     ST_CLERK         2600           2600                  
+
+LAST_NAME                 JOB_ID         SALARY REVISED_SALARY                  
+------------------------- ---------- ---------- --------------                  
+Vargas                    ST_CLERK         2500           2500                  
+Russell                   SA_MAN          14000          14000                  
+Partners                  SA_MAN          13500          13500                  
+Errazuriz                 SA_MAN          12000          12000                  
+Cambrault                 SA_MAN          11000          11000                  
+Zlotkey                   SA_MAN          10500          10500                  
+Tucker                    SA_REP          10000          20000                  
+Bernstein                 SA_REP           9500           9500                  
+Hall                      SA_REP           9000           9000                  
+Olsen                     SA_REP           8000           8000                  
+Cambrault                 SA_REP           7500           7500                  
+
+LAST_NAME                 JOB_ID         SALARY REVISED_SALARY                  
+------------------------- ---------- ---------- --------------                  
+Tuvault                   SA_REP           7000          10500                  
+King                      SA_REP          10000          20000                  
+Sully                     SA_REP           9500           9500                  
+McEwen                    SA_REP           9000           9000                  
+Smith                     SA_REP           8000           8000                  
+Doran                     SA_REP           7500           7500                  
+Sewall                    SA_REP           7000          10500                  
+Vishney                   SA_REP          10500          10500                  
+Greene                    SA_REP           9500           9500                  
+Marvins                   SA_REP           7200           7200                  
+Lee                       SA_REP           6800           6800                  
+
+LAST_NAME                 JOB_ID         SALARY REVISED_SALARY                  
+------------------------- ---------- ---------- --------------                  
+Ande                      SA_REP           6400           6400                  
+Banda                     SA_REP           6200           6200                  
+Ozer                      SA_REP          11500          11500                  
+Bloom                     SA_REP          10000          20000                  
+Fox                       SA_REP           9600           9600                  
+Smith                     SA_REP           7400           7400                  
+Bates                     SA_REP           7300           7300                  
+Kumar                     SA_REP           6100           6100                  
+Abel                      SA_REP          11000          11000                  
+Hutton                    SA_REP           8800           8800                  
+Taylor                    SA_REP           8600           8600                  
+
+LAST_NAME                 JOB_ID         SALARY REVISED_SALARY                  
+------------------------- ---------- ---------- --------------                  
+Livingston                SA_REP           8400           8400                  
+Grant                     SA_REP           7000          10500                  
+Johnson                   SA_REP           6200           6200                  
+Taylor                    SH_CLERK         3200           3200                  
+Fleaur                    SH_CLERK         3100           3100                  
+Sullivan                  SH_CLERK         2500           2500                  
+Geoni                     SH_CLERK         2800           2800                  
+Sarchand                  SH_CLERK         4200           4200                  
+Bull                      SH_CLERK         4100           4100                  
+Dellinger                 SH_CLERK         3400           3400                  
+Cabrio                    SH_CLERK         3000           3000                  
+
+LAST_NAME                 JOB_ID         SALARY REVISED_SALARY                  
+------------------------- ---------- ---------- --------------                  
+Chung                     SH_CLERK         3800           3800                  
+Dilly                     SH_CLERK         3600           3600                  
+Gates                     SH_CLERK         2900           2900                  
+Perkins                   SH_CLERK         2500           2500                  
+Bell                      SH_CLERK         4000           4000                  
+Everett                   SH_CLERK         3900           3900                  
+McCain                    SH_CLERK         3200           3200                  
+Jones                     SH_CLERK         2800           2800                  
+Walsh                     SH_CLERK         3100           3100                  
+Feeney                    SH_CLERK         3000           3000                  
+OConnell                  SH_CLERK         2600           2600                  
+
+LAST_NAME                 JOB_ID         SALARY REVISED_SALARY                  
+------------------------- ---------- ---------- --------------                  
+Grant                     SH_CLERK         2600           2600                  
+Whalen                    AD_ASST          4400           4400                  
+Hartstein                 MK_MAN          13000          13000                  
+Fay                       MK_REP           6000           7500                  
+Mavris                    HR_REP           6500           6500                  
+Baer                      PR_REP          10000          20000                  
+Higgins                   AC_MGR          12008          12008                  
+Gietz                     AC_ACCOUNT       8300           8300                  
+
+107 rows selected.
+
+SQL> spool D:/sqllab.txt append
+SQL> spool off

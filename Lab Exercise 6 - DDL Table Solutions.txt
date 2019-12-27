@@ -1,0 +1,70 @@
+SQL> CREATE TABLE dept80 AS select employee_id,last_name, salary*12 Annual_Salary, hire_date from employees where department_id=80;
+
+Table created.
+
+SQL> desc dept80
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPLOYEE_ID                                        NUMBER(6)
+ LAST_NAME                                 NOT NULL VARCHAR2(25)
+ ANNUAL_SALARY                                      NUMBER
+ HIRE_DATE                                 NOT NULL DATE
+
+SQL> create table dept80 as select employee_id,last_name, salary*12 Annual_Salary, hire_date from employees where department_id=80;
+create table dept80 as select employee_id,last_name, salary*12 Annual_Salary, hire_date from employees where department_id=80
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+SQL> spool D:/sqllab.txt append
+SQL> create table DEPT(ID NUMBER(7), NAME VARCHAR2(25));
+
+Table created.
+
+SQL> create table DEPT0(ID NUMBER(7) primary key, NAME VARCHAR2(25));
+
+Table created.
+
+SQL> desc dept0;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                        NOT NULL NUMBER(7)
+ NAME                                               VARCHAR2(25)
+
+SQL> desc departments;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ DEPARTMENT_ID                             NOT NULL NUMBER(4)
+ DEPARTMENT_NAME                           NOT NULL VARCHAR2(30)
+ MANAGER_ID                                         NUMBER(6)
+ LOCATION_ID                                        NUMBER(4)
+
+SQL> create table dept1(department_id NUMBER(3), department_name VARCHAR(10), manager_id NUMBER(2));
+
+Table created.
+
+SQL> select * from dept1;
+
+no rows selected
+
+SQL> insert into dept1(department_id) values(1004);
+insert into dept1(department_id) values(1004)
+                                        *
+ERROR at line 1:
+ORA-01438: value larger than specified precision allowed for this column 
+
+
+SQL> insert into dept1(department_id) values(100);
+
+1 row created.
+
+SQL> insert into dept1(manager_id) values(2);
+
+1 row created.
+
+SQL> create table EMPTABLE(ID number(7), LAST_NAME varchar2(25), FIRST_NAME varchar2(25), DEPT_ID number(7));
+
+Table created.
+
+SQL> spool D:/sqllab.txt append

@@ -1,0 +1,182 @@
+SQL> spool off
+SQL> create table MY_EMPLOYEE (ID NUMBER(4), last_name varchar2(25), first_name varchar2(25), userid varchar2(8), salary number(9,2));
+
+Table created.
+
+SQL> desc my_employee;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                                 NUMBER(4)
+ LAST_NAME                                          VARCHAR2(25)
+ FIRST_NAME                                         VARCHAR2(25)
+ USERID                                             VARCHAR2(8)
+ SALARY                                             NUMBER(9,2)
+
+SQL> alter table MY_EMPLOYEE modify id number(4) not null;
+
+Table altered.
+
+SQL> desc my_employee;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                        NOT NULL NUMBER(4)
+ LAST_NAME                                          VARCHAR2(25)
+ FIRST_NAME                                         VARCHAR2(25)
+ USERID                                             VARCHAR2(8)
+ SALARY                                             NUMBER(9,2)
+
+SQL> insert into my_employee(id,last_name, first_name, userid, salary) values (1,'Patel','Ralph', 'rpatel',895);
+
+1 row created.
+
+SQL> insert into my_employee(id,last_name, first_name, userid, salary) values (2,'Dancs','Betty', 'bdancs',860);
+
+1 row created.
+
+SQL> desc my_employee;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                        NOT NULL NUMBER(4)
+ LAST_NAME                                          VARCHAR2(25)
+ FIRST_NAME                                         VARCHAR2(25)
+ USERID                                             VARCHAR2(8)
+ SALARY                                             NUMBER(9,2)
+
+SQL> select id,last_name, first_name, userid, salary from my_employee;
+
+        ID LAST_NAME                 FIRST_NAME                USERID           
+---------- ------------------------- ------------------------- --------         
+    SALARY                                                                      
+----------                                                                      
+         1 Patel                     Ralph                     rpatel           
+       895                                                                      
+                                                                                
+         2 Dancs                     Betty                     bdancs           
+       860                                                                      
+                                                                                                                                                  
+
+SQL> insert into my_employee(id,last_name, first_name, userid, salary) values (&id,'&last_name','&first_name','&userid',&salary);
+Enter value for id: 3
+Enter value for last_name: Biri
+Enter value for first_name: Ben
+Enter value for userid: bbiri
+Enter value for salary: 1100
+old   1: insert into my_employee(id,last_name, first_name, userid, salary) values (&id,'&last_name','&first_name','&userid',&salary)
+new   1: insert into my_employee(id,last_name, first_name, userid, salary) values (3,'Biri','Ben','bbiri',1100)
+
+1 row created.
+
+SQL> insert into my_employee(id,last_name, first_name, userid, salary) values (&id,'&last_name','&first_name','&userid',&salary);
+Enter value for id: 4
+Enter value for last_name: Newman
+Enter value for first_name: Chad
+Enter value for userid: cnewman
+Enter value for salary: 750
+old   1: insert into my_employee(id,last_name, first_name, userid, salary) values (&id,'&last_name','&first_name','&userid',&salary)
+new   1: insert into my_employee(id,last_name, first_name, userid, salary) values (4,'Newman','Chad','cnewman',750)
+
+1 row created.
+
+SQL> select * from my_employee;
+
+        ID LAST_NAME                 FIRST_NAME                USERID           
+---------- ------------------------- ------------------------- --------         
+    SALARY                                                                      
+----------                                                                      
+         1 Patel                     Ralph                     rpatel           
+       895                                                                      
+                                                                                
+         2 Dancs                     Betty                     bdancs           
+       860                                                                      
+                                                                                
+         3 Biri                      Ben                       bbiri            
+      1100                                                                      
+                                                                                
+
+        ID LAST_NAME                 FIRST_NAME                USERID           
+---------- ------------------------- ------------------------- --------         
+    SALARY                                                                      
+----------                                                                      
+         4 Newman                    Chad                      cnewman          
+       750                                                                      
+                                                                                
+
+SQL> update my_employee set last_name='Drexler' where id=3;
+
+1 row updated.
+
+SQL> update my_employee set salary=1000 where salary<900;
+
+3 rows updated.
+
+SQL> select * from my_employee;
+
+        ID LAST_NAME                 FIRST_NAME                USERID           
+---------- ------------------------- ------------------------- --------         
+    SALARY                                                                      
+----------                                                                      
+         1 Patel                     Ralph                     rpatel           
+      1000                                                                      
+                                                                                
+         2 Dancs                     Betty                     bdancs           
+      1000                                                                      
+                                                                                
+         3 Drexler                   Ben                       bbiri            
+      1100                                                                      
+                                                                                
+
+        ID LAST_NAME                 FIRST_NAME                USERID           
+---------- ------------------------- ------------------------- --------         
+    SALARY                                                                      
+----------                                                                      
+         4 Newman                    Chad                      cnewman          
+      1000                                                                      
+                                                                              
+
+SQL> delete from my_employee where lower(first_name)='betty';
+
+1 row deleted.
+
+SQL> select * from my_employee;
+
+        ID LAST_NAME                 FIRST_NAME                USERID           
+---------- ------------------------- ------------------------- --------         
+    SALARY                                                                      
+----------                                                                      
+         1 Patel                     Ralph                     rpatel           
+      1000                                                                      
+                                                                                
+         3 Drexler                   Ben                       bbiri            
+      1100                                                                      
+                                                                                
+         4 Newman                    Chad                      cnewman          
+      1000                                                                      
+                                                                                
+
+SQL> insert into my_employee(id,last_name, first_name, userid, salary) values (&id,'&last_name','&first_name','&userid',&salary);
+Enter value for id: 5
+Enter value for last_name: Ropeburn
+Enter value for first_name: Audrey
+Enter value for userid: aropebur
+Enter value for salary: 1550
+old   1: insert into my_employee(id,last_name, first_name, userid, salary) values (&id,'&last_name','&first_name','&userid',&salary)
+new   1: insert into my_employee(id,last_name, first_name, userid, salary) values (5,'Ropeburn','Audrey','aropebur',1550)
+
+1 row created.
+
+SQL> savepoint Audrey;
+
+Savepoint created.
+
+SQL> truncate my_employee;
+truncate my_employee
+                   *
+ERROR at line 1:
+ORA-03290: Invalid truncate command - missing CLUSTER or TABLE keyword 
+
+
+SQL> truncate table my_employee;
+
+Table truncated.
+
+SQL> spool D:/sqllab.txt append
