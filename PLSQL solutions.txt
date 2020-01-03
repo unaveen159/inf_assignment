@@ -1253,4 +1253,22 @@ Minimum of (23, 45) : 23
 
 PL/SQL procedure successfully completed.
 
+SQL> ed
+Wrote file afiedt.buf
+
+  1  begin update departments set department_name='Specialized Marketing' where department_id=30;
+  2  if sql%found then dbms_output.put_line('Updated');
+  3  end if;
+  4  if sql%notfound then dbms_output.put_line('Not updated');
+  5  end if;
+  6  if sql%rowcount>0 then dbms_output.put_line(sql%rowcount||' Rows Updated');
+  7  else
+  8  dbms_output.put_line('No rows updated');
+  9  end if;
+ 10* end;
+SQL> /
+Updated                                                                         
+1 Rows Updated                                                                  
+
+PL/SQL procedure successfully completed.
 SQL> spool off
